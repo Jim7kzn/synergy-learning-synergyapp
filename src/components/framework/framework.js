@@ -1,38 +1,34 @@
 import { Component } from 'react';
-import './framework.css';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+// import './framework.css';
 
-class Framework extends Component{
+class State extends Component{
+constructor(props) {
+	super(props)
+	this.state = {
+		// text: ''
+		num: 0
+	}
+}
+
+	onHandleChange = (e) => {
+		this.setState({
+			// text: e.target.value
+			num: this.state.num + 1
+		})
+	}
 
 	render() {
 		return (
-			<div className="Framework">
-				<div className="testClass">
-					<Stack spacing={2} direction="row">
-						<Button variant="text">Text</Button>
-						<Button variant="contained">Contained</Button>
-						<Button variant="outlined">Outlined</Button>
-					</Stack>
-				</div>
-
-				<div className='testClass'>&nbsp;</div>
-
-				<div className="testClass">
-					<Stack direction="row" spacing={2}>
-						<Button color="secondary">Secondary</Button>
-						<Button variant="contained" color="success">
-							Success
-						</Button>
-						<Button variant="outlined" color="error">
-							Error
-						</Button>
-					</Stack>
-				</div>
-
+			<div>
+				{/*<input type="text" placeholder="Введите чего-нить!" value={this.state.text}*/}
+				{/*onChange={e => this.onHandleChange(e)}/>*/}
+				{/*<p>{this.state.text}</p>*/}
+				<input type="button" value="+++"
+					   onClick={e => this.onHandleChange(e)}/>
+				<p>{this.state.num}</p>
 			</div>
 		);
 	}
 }
 
-export default Framework;
+export default State;

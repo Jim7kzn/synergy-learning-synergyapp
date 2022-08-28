@@ -1,7 +1,8 @@
 import './App.css';
 import { Component } from "react";
 // import Clicker from "./components/clicker/clicker";
-import Framework from "./components/framework/framework";
+// import Framework from "./components/framework/framework";
+import State from "./components/framework/framework";
 
 class App extends Component{
 
@@ -9,7 +10,8 @@ class App extends Component{
         return (
             <div className="App">
                 {/*<Clicker />*/}
-                <Framework />
+                {/*<Framework />*/}
+                <State />
             </div>
         );
     }
